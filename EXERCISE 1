@@ -1,4 +1,4 @@
-Problem Statement
+'''Problem Statement
 Sophia is developing a program to generate a 2D matrix where each element is the product of its row and column indices. She needs to write a program to take the number of rows and columns as input and return a matrix filled such that each element at position (i, j) equals i × j. 
 
 Write a program to ensure that the task is done.
@@ -22,4 +22,10 @@ Output 1 :
 Generated 2D Matrix:
 [[0 0 0]
  [0 1 2]
- [0 2 4]]
+ [0 2 4]]'''
+import numpy as np
+R= int(input())
+C=int(input())
+matrix=np.fromfunction(lambda i, j: i*j, (R,C), dtype=int)
+print("Generated 2D Matrix:")
+print(matrix)
